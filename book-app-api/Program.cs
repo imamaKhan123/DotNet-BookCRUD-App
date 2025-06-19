@@ -1,21 +1,27 @@
-//My imports
+// My imports
 using BookAppApi.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 
-
 var builder = WebApplication.CreateBuilder(args);
 
+// Add dynamic port config **before** building app
+var port = Environment.GetEnvironmentVariable("PORT") ?? "5000";
+
+builder.WebHost.ConfigureKestrel(options =>
+{
+    options.ListenAnyIP(int.Parse(port));
+});
+
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlite("Data Source=bookapp.db")); // <-- persistent SQLite file
+    options.UseSqlite("Data Source=bookapp.db")); // persistent SQLite file
 
 // Add controllers
 builder.Services.AddControllers();
 
 // JWT config
-
 var key = builder.Configuration["Jwt:Key"];
 if (string.IsNullOrWhiteSpace(key))
     throw new Exception("JWT Key is missing from configuration.");
@@ -35,8 +41,7 @@ builder.Services.AddAuthentication(options =>
         ValidateIssuerSigningKey = true,
         ValidIssuer = builder.Configuration["Jwt:Issuer"],
         ValidAudience = builder.Configuration["Jwt:Audience"],
-        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
-    
+        IssuerSigningKey = signingKey
     };
 });
 
@@ -48,12 +53,13 @@ builder.Services.AddCors(options =>
     {
         policy.WithOrigins("http://localhost:4200")  // Angular dev server origin
               .AllowAnyHeader()
-              .AllowAnyMethod().AllowCredentials();
+              .AllowAnyMethod()
+              .AllowCredentials();
     });
 });
 
-
 var app = builder.Build();
+
 app.UseRouting();
 
 app.UseCors("AllowAngularDev");
@@ -62,29 +68,6 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-// Add this block for Render deployment:
-var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
-app.Urls.Add($"http://*:{port}");
+app.MapGet("/", () => "Book API is running!");
+
 app.Run();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
