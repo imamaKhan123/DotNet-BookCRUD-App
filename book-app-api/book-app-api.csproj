@@ -5,6 +5,10 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace>book_app_api</RootNamespace>
+    <RuntimeIdentifier>linux-x64</RuntimeIdentifier>
+<PublishReadyToRun>true</PublishReadyToRun>
+<SelfContained>true</SelfContained>
+
   </PropertyGroup>
 
   <ItemGroup>
