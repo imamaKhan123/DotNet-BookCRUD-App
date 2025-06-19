@@ -69,5 +69,10 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.MapGet("/", () => "Book API is running!");
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+    db.Database.Migrate(); // 🛠️ Auto-apply pending migrations
+}
 
 app.Run();

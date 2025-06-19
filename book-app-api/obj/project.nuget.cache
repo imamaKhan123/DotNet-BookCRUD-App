@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "DualjU4s6Jg=",
+  "dgSpecHash": "kVy7rLSf9Ik=",
   "success": true,
   "projectFilePath": "/Users/anvandare/projects/Book CRUD/book-app-api/book-app-api.csproj",
   "expectedPackageFiles": [
@@ -69,10 +69,9 @@
     "/Users/anvandare/.nuget/packages/system.text.encodings.web/9.0.6/system.text.encodings.web.9.0.6.nupkg.sha512",
     "/Users/anvandare/.nuget/packages/system.text.json/9.0.6/system.text.json.9.0.6.nupkg.sha512",
     "/Users/anvandare/.nuget/packages/system.threading.channels/7.0.0/system.threading.channels.7.0.0.nupkg.sha512",
-    "/Users/anvandare/.nuget/packages/microsoft.netcore.app.runtime.linux-x64/8.0.17/microsoft.netcore.app.runtime.linux-x64.8.0.17.nupkg.sha512",
-    "/Users/anvandare/.nuget/packages/microsoft.aspnetcore.app.runtime.linux-x64/8.0.17/microsoft.aspnetcore.app.runtime.linux-x64.8.0.17.nupkg.sha512",
-    "/Users/anvandare/.nuget/packages/microsoft.netcore.app.crossgen2.osx-x64/8.0.17/microsoft.netcore.app.crossgen2.osx-x64.8.0.17.nupkg.sha512",
-    "/Users/anvandare/.nuget/packages/microsoft.netcore.app.host.linux-x64/8.0.17/microsoft.netcore.app.host.linux-x64.8.0.17.nupkg.sha512"
+    "/Users/anvandare/.nuget/packages/microsoft.netcore.app.runtime.osx-x64/8.0.17/microsoft.netcore.app.runtime.osx-x64.8.0.17.nupkg.sha512",
+    "/Users/anvandare/.nuget/packages/microsoft.aspnetcore.app.runtime.osx-x64/8.0.17/microsoft.aspnetcore.app.runtime.osx-x64.8.0.17.nupkg.sha512",
+    "/Users/anvandare/.nuget/packages/microsoft.netcore.app.crossgen2.osx-x64/8.0.17/microsoft.netcore.app.crossgen2.osx-x64.8.0.17.nupkg.sha512"
   ],
   "logs": []
 }
