@@ -21,7 +21,9 @@ export class SignupComponent {
   error = '';
 
   constructor(private authService: AuthService, private router: Router) {}
-
+ gotoLogin(){
+  this.router.navigate(['/login']);
+ }
   onSubmit() {
     this.error = '';
     this.message = '';
