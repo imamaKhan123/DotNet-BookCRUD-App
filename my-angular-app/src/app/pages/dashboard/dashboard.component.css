@@ -1,0 +1,22 @@
+.right-side {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 1rem;
+    color: #333;
+  }
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+    font-family: Arial, sans-serif;
+  }
+  
+.left-side {
+    display: block;
+    align-items: center;
+    gap: 5px;
+  }
+  

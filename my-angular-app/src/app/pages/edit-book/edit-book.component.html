@@ -1,0 +1,54 @@
+<div class="container mt-4">
+   
+<h4 class="mb-4">Edit Book</h4>
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()" class="needs-validation" novalidate>
+  <div class="mb-3">
+    <label for="title" class="form-label">Title</label>
+    <input
+      id="title"
+      type="text"
+      formControlName="title"
+      class="form-control"
+      [ngClass]="{'is-invalid': form.get('title')?.invalid && form.get('title')?.touched}"
+      required
+    />
+    <div class="invalid-feedback">
+      Title is required.
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label for="author" class="form-label">Author</label>
+    <input
+      id="author"
+      type="text"
+      formControlName="author"
+      class="form-control"
+      [ngClass]="{'is-invalid': form.get('author')?.invalid && form.get('author')?.touched}"
+      required
+    />
+    <div class="invalid-feedback">
+      Author is required.
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label for="publishDate" class="form-label">Publish Date</label>
+    <input
+      id="publishDate"
+      type="date"
+      formControlName="publishDate"
+      class="form-control"
+      [ngClass]="{'is-invalid': form.get('publishDate')?.invalid && form.get('publishDate')?.touched}"
+      required
+    />
+    <div class="invalid-feedback">
+      Publish Date is required.
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-sm btn-primary me-2 responsive-button" [disabled]="form.invalid">Update Book</button>
+  <button type="button" class="btn btn-sm btn-secondary me-2 my-2 responsive-button" (click)="cancel()">Cancel</button>
+</form>
+</div>

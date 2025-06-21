@@ -1,0 +1,43 @@
+<div class="container mt-4">
+    <h2> Add Book</h2>
+<form [formGroup]="form" (ngSubmit)="onSubmit()" class="mb-3">
+    <div class="mb-3">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Title"
+        formControlName="title"
+      />
+      <div *ngIf="form.controls['title'].invalid && form.controls['title'].touched" class="text-danger">
+        Title is required.
+      </div>
+    </div>
+    <div class="mb-3">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Author"
+        formControlName="author"
+      />
+      <div *ngIf="form.controls['author'].invalid && form.controls['author'].touched" class="text-danger">
+        Author is required.
+      </div>
+    </div>
+    <div class="mb-3">
+      <input
+        type="date"
+        class="form-control"
+        formControlName="publishDate"
+      />
+      <div *ngIf="form.controls['publishDate'].invalid && form.controls['publishDate'].touched" class="text-danger">
+        Publish date is required.
+      </div>
+    </div>
+    <button type="submit" class="btn btn-sm btn-primary me-2 my-2 responsive-button"  [disabled]="form.invalid">
+      Add Book
+    </button>
+    <button type="button" class="btn btn-sm btn-secondary me-2 my-2 responsive-button" (click)="cancel()">Cancel</button>
+
+</form>
+</div>
+  

@@ -1,0 +1,78 @@
+/* You can add global styles to this file, and also import other style files */
+.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+  }
+  
+  .dark-mode .btn-primary {
+    background-color: #ffffff;
+    border-color: #f9f9f9;
+    color: black;
+  }
+  .dark-mode .right-side{
+    color: #ffff !important;
+  }
+  .responsive-button {
+ 
+    border-radius: 5px;
+    cursor: pointer;
+    max-width: 100%;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  /* Slightly smaller on tablets */
+  @media (max-width: 768px) {
+    .responsive-button {
+      padding:  0.3rem 0.5rem;
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* Even smaller on mobile */
+  @media (max-width: 480px) {
+    .responsive-button {
+      padding: 6px 12px;
+      font-size: 0.8rem;
+    }
+  }
+  
+  /* Optional hover effect */
+  .responsive-button:hover {
+    background-color: #0053ba;
+    color: white;
+    transform: scale(1.05);
+  }
+  .dark-mode  .responsive-button:hover {
+    background-color: #010101;
+    color: white;
+    border: #ffffff;
+    transform: scale(1.05);
+  }
+  .dark-mode .btn-outline-dark {
+color: #ffffff !important;
+border-color: #ffffff;
+  }
+  table thead tr th{
+    background-color: #007bff !important; /* Bootstrap primary blue */
+    color: white !important;
+    font-size: 0.7rem;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+  }
+  table tr td{
+   
+    font-size: 0.7rem;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+  }
+  .table {
+    border-radius: 1rem !important;
+  }
+  table, th, td {
+    border: 1px solid #dee2e6 !important; 
+  }
+  .dark-mode  table thead tr th{
+    background-color: #0b0b0c !important; /* Bootstrap primary blue */
+    color: white !important;
+    font-size: 0.7rem;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+  }

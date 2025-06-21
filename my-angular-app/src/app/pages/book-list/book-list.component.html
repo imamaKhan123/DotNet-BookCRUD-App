@@ -1,0 +1,33 @@
+<div class="container mt-4">
+    <h2>Book List</h2>
+    <button class="btn btn-sm btn-primary me-2 my-2 responsive-button"(click)="addNewBook()"><i class="fa fa-book-open"></i> Add New Book</button>
+  
+    <table class="table table-bordered">
+      <thead class="table-dark">
+        <tr>
+          <th>ID</th>
+          <th><i class="fa fa-book"></i> Title</th>
+          <th><i class="fa fa-person"></i> Author</th>
+          <th><i class="fa fa-calendar"></i> Publish</th>
+          <th ><i class="fa fa-gears"></i> Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let book of books">
+          <td>{{ book.id }}</td>
+          <td>{{ book.title }}</td>
+          <td>{{ book.author }}</td>
+          <td>{{ book.publishDate | date:'mediumDate' }}</td>
+          <td>
+            <button class="btn btn-sm btn-outline-warning me-2 my-2 responsive-button btn-small" (click)="editBook(book)"><i class="fa fa-edit"></i>Edit</button>
+            <button class="btn btn-sm btn-outline-danger me-2 my-2 responsive-button btn-small" (click)="deleteBook(book)"><i class="fa fa-trash-alt"></i> Delete</button>
+            <button class="btn btn-sm btn-outline-success me-2 my-2 responsive-button btn-small" (click)="addFavorite(book.id)"><i class="fa fa-heart"></i> Add to Favorite</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <ng-template #noBooks>
+        <p>No books available.</p>
+      </ng-template>
+  </div>
+  

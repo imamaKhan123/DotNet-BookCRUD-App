@@ -1,0 +1,47 @@
+<div *ngIf="paginatedBooks().length > 0" class="container mt-4">
+    <h3 class="mb-3">Your Favorite Books</h3>
+  
+    <table class="table table-bordered">
+      <thead class="table-light">
+        <tr>
+          <th>Book Id</th>
+    
+          <th><i class="fa fa-book"></i> Title</th>
+          <th><i class="fa fa-person"></i> Author</th>
+          <th style="width: 120px;"><i class="fa fa-gears"></i> Actions</th>
+        
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let book of paginatedBooks(); let i = index">
+            <td>{{ book.id }}</td>
+            <td>{{ book.title }}</td>
+            <td>{{ book.author }}</td>
+           
+            <td>
+              <button class="btn btn-sm btn-outline-danger my-2 responsive-button"
+                      (click)="remove(favorites[(currentPage - 1) * pageSize + i].id)">
+                      <i class="fa fa-trash-alt"></i> Remove
+              </button>
+            </td>
+          </tr>
+          
+      </tbody>
+    </table>
+  
+    <div class="d-flex justify-content-between align-items-center mt-3">
+      <button class="btn btn-outline-primary responsive-button" (click)="prevPage()" [disabled]="currentPage === 1">
+        Previous
+      </button>
+      <span>Page {{ currentPage }}</span>
+      <button class="btn btn-outline-primary responsive-button" (click)="nextPage()" 
+              [disabled]="currentPage * pageSize >= favorites.length">
+        Next
+      </button>
+    </div>
+  </div>
+  
+  <div *ngIf="favorites.length === 0" class="alert alert-info mt-4">
+    No favorite books added yet.
+  </div>
+  
