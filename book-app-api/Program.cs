@@ -51,7 +51,7 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAngularDev", policy =>
     {
-        policy.WithOrigins(" https://dot-net-book-crud-app-i7p8.vercel.app")  //http://localhost:4200
+        policy.WithOrigins("https://dot-net-book-crud-app-i7p8.vercel.app")  //https://dot-net-book-crud-app-i7p8.vercel.app
               .AllowAnyHeader()
               .AllowAnyMethod()
               .AllowCredentials();
