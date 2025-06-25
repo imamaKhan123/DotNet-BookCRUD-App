@@ -39,6 +39,22 @@
       display: flex !important;
     }
   }
+    /* Even smaller on mobile */
+    @media (max-width: 550px) {
+      .responsive-button {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+      }
+      .button-group{
+        display: flex !important;
+        
+      }
+      .button-group .btn{
+        display: block !important;
+        
+      }
+    }
+    
   
   /* Optional hover effect */
   .responsive-button:hover {

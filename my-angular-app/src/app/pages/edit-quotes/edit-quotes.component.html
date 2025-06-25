@@ -1,0 +1,41 @@
+<div class="container mt-4">
+   
+    <h4 class="mb-4">Edit Quote</h4>
+    
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" class="needs-validation" novalidate>
+      <div class="mb-3">
+        <label for="title" class="form-label">Quote</label>
+        <input
+          id="quote"
+          type="text"
+          formControlName="text"
+          class="form-control"
+          [ngClass]="{'is-invalid': form.get('text')?.invalid && form.get('text')?.touched}"
+          required
+        />
+        <div class="invalid-feedback">
+          Quote is required.
+        </div>
+      </div>
+    
+      <div class="mb-3">
+        <label for="author" class="form-label">Author</label>
+        <input
+          id="author"
+          type="text"
+          formControlName="author"
+          class="form-control"
+          [ngClass]="{'is-invalid': form.get('author')?.invalid && form.get('author')?.touched}"
+          required
+        />
+        <div class="invalid-feedback">
+          Author is required.
+        </div>
+      </div>
+    
+    
+      <button type="submit" class="btn btn-sm btn-primary me-2 responsive-button" [disabled]="form.invalid">Update Quote</button>
+      <button type="button" class="btn btn-sm btn-secondary me-2 my-2 responsive-button" (click)="cancel()">Cancel</button>
+    </form>
+    </div>
+    

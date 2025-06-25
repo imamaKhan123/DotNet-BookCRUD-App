@@ -1,0 +1,38 @@
+<div class="container mt-4">
+    <h2> Add Quote</h2>
+<form [formGroup]="form" (ngSubmit)="onSubmit()" class="mb-3">
+    <div class="mb-3">
+        <label for="quote" class="form-label">Quote</label>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Add a Quote"
+        formControlName="quote"
+      />
+      <div *ngIf="form.controls['quote'].invalid && form.controls['quote'].touched" class="text-danger">
+        Quote is required.
+      </div>
+    </div>
+      <div class="mb-3">
+        <label for="author" class="form-label">Author</label>
+
+      <input
+      type="text"
+      class="form-control"
+      placeholder="Add the Author of Quote"
+      formControlName="author"
+    />
+    <div *ngIf="form.controls['author'].invalid && form.controls['author'].touched" class="text-danger">
+        Author is required.
+    </div>
+    </div>
+    
+  
+    <button type="submit" class="btn btn-sm btn-primary me-2 my-2 responsive-button"  [disabled]="form.invalid">
+      Add Quote
+    </button>
+    <button type="button" class="btn btn-sm btn-secondary me-2 my-2 responsive-button" (click)="cancel()">Cancel</button>
+
+</form>
+</div>
+  

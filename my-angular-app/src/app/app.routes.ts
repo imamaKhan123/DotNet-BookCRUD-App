@@ -9,6 +9,9 @@ import { SignupComponent } from './pages/signup/signup.component'; // You need t
 import { authGuard } from './auth.guard';
 import { guestGuard } from './guest.guard';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { ViewQuotesComponent } from './pages/view-quotes/view-quotes.component';
+import { EditQuotesComponent } from './pages/edit-quotes/edit-quotes.component';
+import { CreateQuotesComponent } from './pages/create-quotes/create-quotes.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -31,6 +34,9 @@ export const routes: Routes = [
       { path: 'books', component: BookListComponent, canActivate: [authGuard] },
       { path: 'books/add', component: AddBookComponent, canActivate: [authGuard] },
       { path: 'books/edit/:id', component: EditBookComponent, canActivate: [authGuard] },
+      { path: 'quotes', component: ViewQuotesComponent, canActivate: [authGuard] },
+      { path: 'quotes/add', component: CreateQuotesComponent, canActivate: [authGuard] },
+      { path: 'quotes/edit/:id', component: EditQuotesComponent, canActivate: [authGuard] },
       { path: 'favorites', component: MyQuotesComponent, canActivate: [authGuard] },
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
     ],

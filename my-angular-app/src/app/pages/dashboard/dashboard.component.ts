@@ -73,7 +73,9 @@ export class DashboardComponent {
   navigateToFavorites() {
     this.router.navigate(['/favorites']);
   }
-
+  navigateToQuotes() {
+    this.router.navigate(['/quotes']);
+  }
   logout() {
     if (this.isBrowser) {
       localStorage.removeItem('token');
