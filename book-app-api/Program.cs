@@ -51,7 +51,7 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAngularDev", policy =>
     {
-        policy.WithOrigins("https://dot-net-book-crud-app-i7p8.vercel.app")  // Angular dev server origin
+        policy.WithOrigins(" https://dot-net-book-crud-app-i7p8.vercel.app")  //http://localhost:4200
               .AllowAnyHeader()
               .AllowAnyMethod()
               .AllowCredentials();
@@ -74,5 +74,6 @@ using (var scope = app.Services.CreateScope())
     var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
     db.Database.Migrate(); // 🛠️ Auto-apply pending migrations
 }
+
 
 app.Run();

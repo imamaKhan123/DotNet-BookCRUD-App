@@ -10,5 +10,6 @@ public class AppDbContext : DbContext
     public DbSet<Book> Books => Set<Book>();
     public DbSet<User> Users => Set<User>();
     public DbSet<Favorite> Favorites { get; set; }
+    public DbSet<Quote> Quotes { get; set; }
 
 }

@@ -458,3 +458,7 @@
 /Users/anvandare/projects/Book CRUD/book-app-api/obj/Debug/net8.0/osx-x64/book-app-api.pdb
 /Users/anvandare/projects/Book CRUD/book-app-api/obj/Debug/net8.0/osx-x64/book-app-api.genruntimeconfig.cache
 /Users/anvandare/projects/Book CRUD/book-app-api/obj/Debug/net8.0/osx-x64/ref/book-app-api.dll
+/Users/anvandare/projects/Book CRUD/book-app-api/bin/Debug/net8.0/osx-x64/publish/publish/appsettings.Development.json
+/Users/anvandare/projects/Book CRUD/book-app-api/bin/Debug/net8.0/osx-x64/publish/publish/appsettings.json
+/Users/anvandare/projects/Book CRUD/book-app-api/bin/Debug/net8.0/osx-x64/publish/publish/book-app-api.deps.json
+/Users/anvandare/projects/Book CRUD/book-app-api/bin/Debug/net8.0/osx-x64/publish/publish/book-app-api.runtimeconfig.json
