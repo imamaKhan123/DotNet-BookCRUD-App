@@ -1,8 +1,10 @@
+<div class="container mt-4">
+<h2>Quotes</h2>
+<button class="btn btn-sm btn-primary me-2 my-2 responsive-button" (click)="addNewQuote()">
+  <i class="fa fa-quote-right-alt"></i> Add New Quote
+</button>
 <div *ngIf="paginatedQuotes().length > 0" class="container mt-4">
-  <h2>Quotes</h2>
-  <button class="btn btn-sm btn-primary me-2 my-2 responsive-button" (click)="addNewQuote()">
-    <i class="fa fa-quote-right-alt"></i> Add New Quote
-  </button>
+ 
 
   <table class="table table-bordered">
     <thead class="table-dark">
@@ -45,4 +47,5 @@
 
 <div *ngIf="quotes.length === 0" class="alert alert-info mt-4">
   No quotes added yet.
+</div>
 </div>
