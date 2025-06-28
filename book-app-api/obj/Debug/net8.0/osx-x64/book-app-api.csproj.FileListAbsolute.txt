@@ -462,3 +462,5 @@
 /Users/anvandare/projects/Book CRUD/book-app-api/bin/Debug/net8.0/osx-x64/publish/publish/appsettings.json
 /Users/anvandare/projects/Book CRUD/book-app-api/bin/Debug/net8.0/osx-x64/publish/publish/book-app-api.deps.json
 /Users/anvandare/projects/Book CRUD/book-app-api/bin/Debug/net8.0/osx-x64/publish/publish/book-app-api.runtimeconfig.json
+/Users/anvandare/projects/Book CRUD/book-app-api/bin/Debug/net8.0/osx-x64/Npgsql.dll
+/Users/anvandare/projects/Book CRUD/book-app-api/bin/Debug/net8.0/osx-x64/Npgsql.EntityFrameworkCore.PostgreSQL.dll

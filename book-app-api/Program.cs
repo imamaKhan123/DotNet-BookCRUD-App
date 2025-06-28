@@ -16,7 +16,7 @@ builder.WebHost.ConfigureKestrel(options =>
 });
 
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlite("Data Source=bookapp.db")); // persistent SQLite file
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 // Add controllers
 builder.Services.AddControllers();
