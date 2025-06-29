@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace book_app_api.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250629162406_FixPublishDateType")]
-    partial class FixPublishDateType
+    [Migration("20250629164139_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
