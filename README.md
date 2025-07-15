@@ -19,7 +19,19 @@ A simple and lightweight Book Management Web Application built using **ASP.NET C
 - Bootstrap 5
 - Razor Views
 
+
+
+
+
 ## Screenshots
+<img width="828" height="1792" alt="image" src="https://github.com/user-attachments/assets/54c45913-1540-4f9c-b79b-20bf56953ba9" />
+<img width="828" height="1792" alt="image" src="https://github.com/user-attachments/assets/1df6d159-9856-41ec-a064-4e480e6f34e0" />
+<img width="828" height="1792" alt="image" src="https://github.com/user-attachments/assets/44f43553-e611-41cc-9d95-f52c321718ca" />
+<img width="828" height="1792" alt="image" src="https://github.com/user-attachments/assets/46302ded-137b-4155-a84b-08c459e974c1" />
+
+
+
+
 <img width="414" alt="Screenshot 2025-06-19 at 18 19 01" src="https://github.com/user-attachments/assets/cf3b086b-476f-4b3c-ab96-444463066fb1" />
 <img width="449" alt="Screenshot 2025-06-19 at 18 19 24"
 <img width="568" alt="Screenshot 2025-06-21 at 16 20 02" src="https://github.com/user-attachments/assets/881c31d6-de67-4717-8620-759905b3615d" />
